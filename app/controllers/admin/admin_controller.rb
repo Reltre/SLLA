@@ -2,7 +2,7 @@ class Admin::AdminController < ApplicationController
   before_action :require_admin_login, only: :index
 
   def index
-    @user = User.find(current_user).email
+    @user = User.find(current_user)
 
     @events = [
       {
