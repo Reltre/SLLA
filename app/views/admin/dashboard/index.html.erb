@@ -1,32 +1,41 @@
-<div id="admin-page">
+<div id="admin-page" class="ml-4">
   <div class="row" id="welcome">
-    <div class="col-md">
+    <div class="col-md-5">
       <div>
         <%= "Logged in as #{@user.email}." %> 
-        <%= link_to('Log Out', '#') %> 
+        <%= link_to 'Log Out', '#' %> 
       </div>
     </div>
   </div>
-  <div class="row" id="view-delete-events">
-    <div class="col-md">
-      
+  <div class="row my-2" id="view-delete-events">
+    <div class="col-md-5">
+      <%= link_to "View Deleted Events", '#' %>
     </div>
   </div>
-    <div class="row">
-    <div class="col-md">
-      
+  <div class="row my-4">
+    <div class="col-md-5">
+      <h2>Moderate Suggested Events</h2>
     </div>
   </div>
   <div id="events_panel">
     <% @events.each do |event| %>
-      <div class="row" >
-        <div class="col-md">
-          <div id="an_event">
-            <span></span>
-            ...
-            <button id="accept">
-            <button id="not_accept">
-          </div>
+      <div class="row my-2" id="an_event">
+        <div class="col-md-1" id="date">
+          <span>Jan</span>
+          <div class="w-30"></div>
+          <spam>29</span>
+        </div>
+        <div class="col-md-3" id="event-details">
+          <span>Title</span>
+          <div class="w-100"></div>
+          <span>Day and Time</span>
+          <div class="w-100"></div>
+          <span>Location</span>
+        </div>
+        <div class="col-md-1" id="event-controls">
+          <button class="btn" id="accept">Accept</button>
+          <div class="w-30"></div>
+          <button class="btn" id="not_accept">Delete</button>
         </div>
       </div>
     <% end %>
