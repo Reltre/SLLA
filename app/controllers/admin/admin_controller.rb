@@ -1,4 +1,4 @@
-class Admin::AdminController < ApplicationController
+class Admin::DashBoardController < ApplicationController
   before_action :require_admin_login, only: :index
 
   def index
