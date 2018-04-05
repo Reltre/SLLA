@@ -31,9 +31,5 @@ describe Admin::SessionsController do
     it "redirects to home page" do
       expect(response).to redirect_to(root_path)
     end
-
-    it "displays flash logout message" do
-      expect(flash[:success]).to eq("Goodbye! See you next time.")
-    end
   end
 end
