@@ -1,8 +1,6 @@
 module FeatureMacros
   def admin_log_in(user = nil)
-    unless user
-      user = User.create(email: 'example@example.com', password: 'password', admin: true)
-    end
+    user ||= User.create(email: 'example@example.com', password: 'password', admin: true)
     visit admin_login_path
     expect(page).to have_text "Log In"
     fill_in "email", with: user.email
