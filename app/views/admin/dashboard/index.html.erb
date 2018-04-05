@@ -1,40 +1,40 @@
 <div id="admin-page">
   <div class="flex-row d-flex justify-content-center" id="welcome">
-    <div class="col-md-5">
+    <div class="col-md-8">
       <div>
         <%= "Logged in as #{@user.email}." %> 
-        <%= link_to 'Log Out', '#' %> 
+        <%= link_to 'Log Out', admin_logout_path, method: :post %> 
       </div>
     </div>
   </div>
   <div class="flex-row my-2 d-flex justify-content-center" id="view-delete-events">
-    <div class="col-md-5">
+    <div class="col-md-8">
       <%= link_to "View Deleted Events", '#' %>
     </div>
   </div>
   <div class="flex-row my-4 d-flex justify-content-center">
-    <div class="col-md-5">
-      <h2>Moderate Suggested Events</h2>
+    <div class="col-md-8">
+      <h1>Moderate Suggested Events</h1>
     </div>
   </div>
   <div id="events_panel">
     <% @events.each do |event| %>
       <div class="flex-row my-2 d-flex justify-content-center" id="an_event">
-        <div class="col-md-1" id="date">
+        <div class="col-md-2" id="date">
           <span>Jan</span>
           <div class="w-30"></div>
           <spam>29</span>
         </div>
-        <div class="col-md-3" id="event-details">
+        <div class="col-md-4" id="event-details">
           <span>Title</span>
           <div class="w-100"></div>
           <span>Day and Time</span>
           <div class="w-100"></div>
           <span>Location</span>
         </div>
-        <div class="col-md-1" id="event-controls">
+        <div class="col-md-2" id="event-controls">
           <button class="btn" id="accept">Accept</button>
-          <div class="w-30"></div>
+          <div class="my-2 w-30"></div>
           <button class="btn" id="not_accept">Delete</button>
         </div>
       </div>

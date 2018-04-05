@@ -1,6 +1,6 @@
 class Admin::SessionsController < ApplicationController
-  before_action :require_admin_login, only: :index
-  before_action :redirect_if_logged_in, except: :index
+  before_action :require_admin_login, only: [:index, :destroy]
+  before_action :redirect_if_logged_in, except: [:index, :destroy]
 
   def new; end
 
@@ -13,5 +13,8 @@ class Admin::SessionsController < ApplicationController
     else
       render_login_error
     end
+  end
+
+  def destroy
   end
 end
