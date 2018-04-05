@@ -1,5 +1,5 @@
-<div id="admin-page" class="ml-4">
-  <div class="row" id="welcome">
+<div id="admin-page">
+  <div class="flex-row d-flex justify-content-center" id="welcome">
     <div class="col-md-5">
       <div>
         <%= "Logged in as #{@user.email}." %> 
@@ -7,19 +7,19 @@
       </div>
     </div>
   </div>
-  <div class="row my-2" id="view-delete-events">
+  <div class="flex-row my-2 d-flex justify-content-center" id="view-delete-events">
     <div class="col-md-5">
       <%= link_to "View Deleted Events", '#' %>
     </div>
   </div>
-  <div class="row my-4">
+  <div class="flex-row my-4 d-flex justify-content-center">
     <div class="col-md-5">
       <h2>Moderate Suggested Events</h2>
     </div>
   </div>
   <div id="events_panel">
     <% @events.each do |event| %>
-      <div class="row my-2" id="an_event">
+      <div class="flex-row my-2 d-flex justify-content-center" id="an_event">
         <div class="col-md-1" id="date">
           <span>Jan</span>
           <div class="w-30"></div>
